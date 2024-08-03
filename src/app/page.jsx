@@ -1,0 +1,35 @@
+"use client";
+import { useState, useEffect } from "react";
+import PreLoader from "@/components/PreLoader/PreLoader";
+import HeroSection from "@/components/HeroSection/HeroSection";
+export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Simulate loading time
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (loading) {
+      // Add the 'loaded' class to the preloader-content once loading is complete
+      const preloader = document.querySelector(".preloader-content");
+      if (preloader) {
+        preloader.classList.add("loaded");
+      }
+    }
+  }, [loading]);
+
+  return (
+    <div>
+      {/* Preloader */}
+      {/* {loading && <PreLoader />} */}
+
+      {/* Main Content */}
+      {!loading && <HeroSection />}
+    </div>
+  );
+}

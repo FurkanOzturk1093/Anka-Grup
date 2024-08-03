@@ -13331,6 +13331,11 @@ kbd {
   height: 100%;
   width: 100%;
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
 }
 
 .loading-window {
@@ -13360,7 +13365,8 @@ kbd {
   position: absolute;
   width: 117px;
   height: 42px;
-  right: 0%;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
   transition: right 1s ease-in-out;
 }
 .car .strike {
@@ -13462,10 +13468,10 @@ kbd {
 }
 
 .preloader-content.loaded .car {
-  position: absolute;
-  right: -1000px;
+  right: -1000px; /* Move car out of view to the right */
+  left: auto; /* Clear left alignment */
+  transform: none; /* Remove centering */
 }
-
 /*--------------------------------------------------------------
   4. Spacing
 ----------------------------------------------------------------*/
@@ -15580,15 +15586,25 @@ kbd {
     left: -15px;
     background-color: rgba(0, 0, 0, 0.8549019608);
     padding: 10px 0;
-    display: none;
+    display: none; /* Hide by default */
     top: 0%;
     padding-top: 75px;
     border-top: 1px solid rgba(77, 77, 77, 0.3215686275);
     border-bottom: 1px solid rgba(77, 77, 77, 0.3215686275);
-    overflow: auto;
-    max-height: calc(100vh - 80px);
+    overflow: hidden; /* Ensure no overflow when animating */
+    max-height: 0; /* Start with zero height */
+    opacity: 0; /* Start with hidden opacity */
     line-height: 1.6em;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Animate height and opacity */
   }
+
+  /* Show the menu when the 'open' class is added */
+  .ak-nav .ak-nav_list.active {
+    display: block; /* Ensure it is displayed */
+    max-height: calc(100vh - 80px); /* Set maximum height */
+    opacity: 1; /* Full opacity */
+  }
+
   .ak-nav .ak-nav_list ul {
     padding-left: 15px;
     display: none;
