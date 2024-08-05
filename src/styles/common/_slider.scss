@@ -51,8 +51,7 @@
       height: 55px;
       width: 55px;
       border-radius: 50% 50% 50% 50%;
-      backdrop-filter: blur(100px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+
       transition: all 0.3s ease-in-out;
     }
     .btn-arrow {
@@ -77,8 +76,7 @@
       height: 55px;
       width: 55px;
       border-radius: 50% 50% 50% 50%;
-      backdrop-filter: blur(100px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+
       transition: all 0.3s ease-in-out;
       transform: rotate(180deg);
     }

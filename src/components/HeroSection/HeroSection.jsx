@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { motion, useAnimation } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 Swiper.use([Navigation, Pagination, Autoplay]);
 
@@ -172,7 +172,7 @@ export default function HeroSection() {
               <div className="hero-swiper-prev">
                 <div className="btn-cricle ak-white-bg-1"></div>
                 <div className="btn-arrow">
-                  <FaChevronLeft size={29} color="#fff" />
+                  <FaArrowLeft size={29} color="#fff" />
                 </div>
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function HeroSection() {
               <div className="hero-swiper-next">
                 <div className="btn-cricle ak-white-bg-1"></div>
                 <div className="btn-arrow">
-                  <FaChevronRight size={29} color="#fff" />
+                  <FaArrowRight size={29} color="#fff" />
                 </div>
               </div>
             </div>

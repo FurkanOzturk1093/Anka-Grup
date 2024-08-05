@@ -14696,10 +14696,7 @@ kbd {
   position: absolute;
   height: 55px;
   width: 55px;
-  border-radius: 50% 50% 50% 50%;
-  -webkit-backdrop-filter: blur(100px);
-  backdrop-filter: blur(100px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+
   transition: all 0.3s ease-in-out;
 }
 .ak-swiper-navigation-wrap .ak-swiper-button-next .btn-arrow {
@@ -14724,9 +14721,6 @@ kbd {
   height: 55px;
   width: 55px;
   border-radius: 50% 50% 50% 50%;
-  -webkit-backdrop-filter: blur(100px);
-  backdrop-filter: blur(100px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease-in-out;
   transform: rotate(180deg);
 }
@@ -16608,6 +16602,10 @@ kbd {
   transition: all 0.6s;
   transition-delay: 0.3s;
 }
+.testimonial-section {
+  position: relative;
+  padding: 4rem 0;
+}
 .ak-testimonal
   .swiper-slide.swiper-slide-active
   .testimonal-info.ak-style1
@@ -17112,10 +17110,7 @@ kbd {
 }
 .pricing-card .opation-all .opation {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  justify-content: flex-start;
 }
 .pricing-card .opation-all .opation .title {
   font-size: 18px;
