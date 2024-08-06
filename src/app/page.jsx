@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div>
       {/* Preloader */}
-      {/* {loading && <PreLoader />} */}
+      {loading && <PreLoader />}
 
       {!loading && (
         <>
