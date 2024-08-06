@@ -20,10 +20,10 @@ export default function NavBar() {
             <div className="ak-main-header-left">
               <Link href="/" className="ak-site_branding">
                 <Image
-                  src="/assets/img/logo.svg"
+                  src="/assets/img/logo.png"
                   alt="Site Logo"
-                  width={100}
-                  height={50}
+                  width={200}
+                  height={200}
                 />
               </Link>
             </div>
@@ -73,7 +73,7 @@ export default function NavBar() {
             </div>
             <div className="ak-main-header-right">
               <Link
-                href="tel:1-800-915-6271"
+                href="tel:111 1 111"
                 className="d-flex align-items-center gap-3"
               >
                 <div className="heartbeat-icon">
@@ -86,7 +86,7 @@ export default function NavBar() {
                     />
                   </span>
                 </div>
-                <h6>1-800-915-6271</h6>
+                <h6>111 1 111</h6>
               </Link>
             </div>
           </div>

@@ -24,10 +24,7 @@ export default function HeroSection() {
         el: ".swiper-pagination",
         clickable: true,
       },
-      navigation: {
-        nextEl: ".ak-swiper-button-next",
-        prevEl: ".ak-swiper-button-prev",
-      },
+
       on: {
         slideChange: function (swiper) {
           setActiveIndex(swiper.realIndex);
@@ -160,27 +157,6 @@ export default function HeroSection() {
                       </a>
                     </motion.div>
                   </motion.div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="ak-swiper-controll-hero-1">
-          <div className="ak-swiper-navigation-wrap">
-            <div className="ak-swiper-button-prev">
-              <div className="hero-swiper-prev">
-                <div className="btn-cricle ak-white-bg-1"></div>
-                <div className="btn-arrow">
-                  <FaArrowLeft size={29} color="#fff" />
-                </div>
-              </div>
-            </div>
-            <div className="ak-swiper-button-next">
-              <div className="hero-swiper-next">
-                <div className="btn-cricle ak-white-bg-1"></div>
-                <div className="btn-arrow">
-                  <FaArrowRight size={29} color="#fff" />
                 </div>
               </div>
             </div>

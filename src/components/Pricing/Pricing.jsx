@@ -20,7 +20,6 @@ const PricingCard = ({ title, discountPrice, mainPrice, options }) => (
               size={27}
             />
           </div>
-
           <p className="title whitespace-nowrap">{option}</p>
         </div>
       ))}
@@ -98,9 +97,10 @@ const PricingSection = () => {
               <div className="background-text">Fiyatlandırma</div>
               <h2 className="ak-section-title">Fiyatlandırma</h2>
               <p className="ak-section-subtitle">
-                Baskı ve dizgi endüstrisinin basitçe sahte metni. Lorem Ipsum,
-                endüstrinin standart metni olmuştur. Baskı ve dizgi
-                endüstrisinin basitçe sahte metni.
+                Araçlarınız için en iyi fiyatlandırma seçeneklerimizi keşfedin.
+                Aşağıda yer alan fiyatlandırma seçeneklerimizden birini seçerek,
+                aracınız için en uygun fiyatlandırma seçeneğini
+                belirleyebilirsiniz.
               </p>
             </div>
           </div>
@@ -109,12 +109,14 @@ const PricingSection = () => {
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
+              autoplay={{ delay: 5000 }}
+              loop={true}
               breakpoints={{
                 640: {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                 },
                 1024: {
-                  slidesPerView: 3,
+                  slidesPerView: 1,
                 },
               }}
             >

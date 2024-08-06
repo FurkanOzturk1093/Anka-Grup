@@ -13,31 +13,11 @@ const TestimonialSection = () => {
         <div className="ak-testimonal-controll">
           <div className="testimonal-heading">
             <div className="ak-section-heading ak-style-1">
-              <div className="background-text">Geri Bildirim</div>
+              <div className="background-text">Bildirim</div>
               <h2 className="ak-section-title">
                 Müşterilerimizin Ne <br /> Söylediğine Bakın
               </h2>
             </div>
-          </div>
-          <div className="testimonal-controll">
-            <button className="testimonal-prev button">
-              <Image
-                src="/assets/img/prev.svg"
-                alt="Önceki"
-                width={20}
-                height={20}
-              />
-              <span> önceki</span>
-            </button>
-            <button className="testimonal-next button">
-              <span>sonraki</span>{" "}
-              <Image
-                src="/assets/img/next.svg"
-                alt="Sonraki"
-                width={20}
-                height={20}
-              />
-            </button>
           </div>
         </div>
         <div className="ak-height-50 ak-height-lg-50"></div>

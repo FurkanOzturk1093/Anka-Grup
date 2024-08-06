@@ -17,12 +17,12 @@ const Footer = () => {
         <div className="ak-height-70 ak-height-lg-30"></div>
         <div className="primary-color-border"></div>
         <div className="ak-height-35 ak-height-lg-30"></div>
-        <div className="footer-logo">
+        <div className="footer-logo py-4">
           <Image
-            src="/assets/img/footer-logo.svg"
+            src="/assets/img/logo.png"
             alt="Footer Logo"
-            width={150}
-            height={50}
+            width={200}
+            height={200}
           />
           <div className="ak-height-15 ak-height-lg-10"></div>
         </div>
@@ -36,17 +36,17 @@ const Footer = () => {
             <div className="ak-height-35 ak-height-lg-30"></div>
             <div className="d-flex align-items-center gap-3">
               <div className="heartbeat-icon">
-                <Link href="tel:(406)555-0120">
+                <Link href="tel:(111) 111-1111">
                   <span className="ak-heartbeat-btn">
                     <FaPhoneAlt size={24} />
                   </span>
                 </Link>
               </div>
               <Link
-                href="tel:(406)555-0120"
+                href="tel:(111) 111-1111"
                 className="phone text-hover-animaiton white whitespace-nowrap"
               >
-                (406) 555-0120
+                (111) 111-1111
               </Link>
             </div>
           </div>
@@ -115,11 +115,12 @@ const Footer = () => {
             <p className="adress-title">LOKASYON & İLETİŞİM</p>
             <Link href="#" className="location">
               <FiMapPin size={24} className="me-1" />
-              901 N Pitt Str., Suite 170 Alexandria, NY, ABD
+              Büyük sanayi 1.Cad Arpacıoğlu 2 işhanı no:95/1 no:95/11 06006
+              İskitler-Ankara-Altındağ
             </Link>
             <Link href="mailto:example@email.com" className="email">
               <FaEnvelope size={24} className="me-1" />
-              example@email.com
+              info@ankagrup.org
             </Link>
           </div>
         </div>
