@@ -1,32 +1,10 @@
+// src/components/ServicesSection.js
 import React from "react";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
-
-const services = [
-  {
-    href: "/services-single",
-    imgSrc: "/assets/img/service_1.jpg",
-    title: "Performans Yükseltmeleri ve Özelleştirme",
-    description:
-      "Araç performansınızı artırarak, kişisel ihtiyaçlarınıza uygun özelleştirme seçenekleri sunuyoruz.",
-  },
-  {
-    href: "/services-single",
-    imgSrc: "/assets/img/service_3.jpg",
-    title: "Elektrik ve Elektronik Sistemler",
-    description:
-      "Araç elektrik ve elektronik sistemlerinde uzmanlaşmış ekibimizle, sorunlarınıza hızlı ve etkili çözümler sunuyoruz.",
-  },
-  {
-    href: "/services-single",
-    imgSrc: "/assets/img/service_2.jpg",
-    title: "Motor Diagnostik ve Onarım",
-    description:
-      "Motorunuzun sağlığını korumak için kapsamlı teşhis ve onarım hizmetleri sağlıyoruz.",
-  },
-];
+import { useSelector } from "react-redux";
 
 const ServiceCard = ({ service, index }) => {
   const controls = useAnimation();
@@ -42,49 +20,52 @@ const ServiceCard = ({ service, index }) => {
   }, [controls, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      className="service-card"
-      initial="hidden"
-      animate={controls}
-      variants={{
-        visible: { opacity: 1, x: 0 },
-        hidden: { opacity: 0, x: -100 },
-      }}
-      transition={{ duration: 0.5, delay: index * 0.2 }}
-    >
-      <Link href={service.href} className="card-img">
-        <Image
-          src={service.imgSrc}
-          alt={service.title}
-          width={400}
-          height={300}
-          className="ak-bg"
-        />
-      </Link>
+    <div>
       <motion.div
-        className="card-info"
-        initial={{ opacity: 0, y: 20 }}
+        ref={ref}
+        className="service-card"
+        initial="hidden"
         animate={controls}
         variants={{
-          visible: { opacity: 1, y: 0 },
-          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: -100 },
         }}
-        transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
+        transition={{ duration: 0.5, delay: index * 0.2 }}
       >
-        <Link href={service.href} className="more-btn">
-          {service.title}
+        <Link href={service.href} className="card-img">
+          <Image
+            src={service.imgSrc}
+            alt={service.title}
+            width={300}
+            height={300}
+            className="ak-bg"
+          />
         </Link>
-        <p className="card-desp">{service.description}</p>
-        <Link href={service.href} className="more-btn">
-          DAHA FAZLA GÖR
-        </Link>
+        <motion.div
+          className="card-info"
+          initial={{ opacity: 0, y: 20 }}
+          animate={controls}
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 20 },
+          }}
+          transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
+        >
+          <Link href={service.href} className="more-btn">
+            {service.title}
+          </Link>
+          <p className="card-desp">{service.description}</p>
+          <Link href={service.href} className="more-btn">
+            DAHA FAZLA GÖR
+          </Link>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 
 const ServicesSection = () => {
+  const services = useSelector((state) => state.services.services);
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: false,
