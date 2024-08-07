@@ -118,6 +118,9 @@ const PricingSection = () => {
                 1024: {
                   slidesPerView: 1,
                 },
+                1200: {
+                  slidesPerView: 3,
+                },
               }}
             >
               {pricingOptions.map((option, index) => (

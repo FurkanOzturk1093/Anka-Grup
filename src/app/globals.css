@@ -17171,7 +17171,7 @@ kbd {
 }
 .blog-card .blog-header-info img {
   width: 100%;
-  height: auto;
+  max-height: 300px;
   transition: all 0.5s ease-in-out;
 }
 .blog-card .blog-body-info {

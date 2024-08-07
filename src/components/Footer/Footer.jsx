@@ -36,17 +36,17 @@ const Footer = () => {
             <div className="ak-height-35 ak-height-lg-30"></div>
             <div className="d-flex align-items-center gap-3">
               <div className="heartbeat-icon">
-                <Link href="tel:(111) 111-1111">
+                <Link href="tel:444 7 206">
                   <span className="ak-heartbeat-btn">
                     <FaPhoneAlt size={24} />
                   </span>
                 </Link>
               </div>
               <Link
-                href="tel:(111) 111-1111"
+                href="tel:444 7 206"
                 className="phone text-hover-animaiton white whitespace-nowrap"
               >
-                (111) 111-1111
+                444 7 206
               </Link>
             </div>
           </div>
