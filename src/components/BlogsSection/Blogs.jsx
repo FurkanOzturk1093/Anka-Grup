@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -64,26 +65,7 @@ const BlogPost = ({ post }) => {
 };
 
 const BlogNews = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      date: "17.10.2023",
-      title: "Düzenli Araç Bakımının Önemi",
-      image: "/assets/img/blog_3.jpg",
-    },
-    {
-      id: 2,
-      date: "05.11.2023",
-      title: "Güvenilirliğe Giden Yol: Temel Araç Bakım İpuçları",
-      image: "/assets/img/blog_1.jpg",
-    },
-    {
-      id: 3,
-      date: "12.11.2023",
-      title: "Garajdan Zafer Yolu: Araç Sağlığınızı Dönüştürün",
-      image: "/assets/img/blog_2.jpg",
-    },
-  ];
+  const blogPosts = useSelector((state) => state.blog.posts);
 
   return (
     <>

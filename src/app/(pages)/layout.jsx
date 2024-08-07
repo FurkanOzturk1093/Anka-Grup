@@ -24,11 +24,9 @@ export default function Layout({ children }) {
     }
   }, [loading]);
   return (
-    <html>
-      <body>
-        {loading && <PreLoader />}
-        {children}
-      </body>
-    </html>
+    <div>
+      {loading && <PreLoader />}
+      {children}
+    </div>
   );
 }

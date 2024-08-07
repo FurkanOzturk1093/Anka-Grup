@@ -4,11 +4,13 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 Swiper.use([Autoplay]);
 
 const TrustedClientSection = () => {
   const swiperRef = useRef(null);
+  const clients = useSelector((state) => state.clients.clients);
 
   useEffect(() => {
     const swiper = new Swiper(swiperRef.current, {
@@ -16,6 +18,7 @@ const TrustedClientSection = () => {
       autoplay: {
         delay: 3000,
       },
+      centeredSlides: true, // Aktif slaytı ortala
       slidesPerView: 5, // Aynı anda 5 slayt göster
       slidesPerGroup: 1, // Bir seferde bir slayt hareket et
       spaceBetween: 10, // Slaytlar arasındaki boşluk
@@ -27,10 +30,10 @@ const TrustedClientSection = () => {
           slidesPerView: 3,
         },
         480: {
-          slidesPerView: 3,
+          slidesPerView: 2,
         },
         320: {
-          slidesPerView: 3,
+          slidesPerView: 2,
         },
       },
     });
@@ -45,78 +48,20 @@ const TrustedClientSection = () => {
       <div className="ak-height-125 ak-height-lg-80"></div>
       <div className="container">
         <div className="ak-slider ak-trusted-client-slider" ref={swiperRef}>
-          <h4 className="title">Güvenilen Müşteriler</h4>
+          <h4 className="title">Çalıştığımız Partnerlerimiz</h4>
           <div className="swiper-wrapper">
-            <div className="swiper-slide">
-              <motion.div
-                className="trusted-client"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <img src="/assets/img/trusted-client_1.png" alt="Müşteri 1" />
-              </motion.div>
-            </div>
-            <div className="swiper-slide">
-              <motion.div
-                className="trusted-client"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <img src="/assets/img/trusted-client_2.png" alt="Müşteri 2" />
-              </motion.div>
-            </div>
-            <div className="swiper-slide">
-              <motion.div
-                className="trusted-client"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <img src="/assets/img/trusted-client_3.png" alt="Müşteri 3" />
-              </motion.div>
-            </div>
-            <div className="swiper-slide">
-              <motion.div
-                className="trusted-client"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <img src="/assets/img/trusted-client_4.png" alt="Müşteri 4" />
-              </motion.div>
-            </div>
-            <div className="swiper-slide">
-              <motion.div
-                className="trusted-client"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <img src="/assets/img/trusted-client_5.png" alt="Müşteri 5" />
-              </motion.div>
-            </div>
-            <div className="swiper-slide">
-              <motion.div
-                className="trusted-client"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <img src="/assets/img/trusted-client_6.png" alt="Müşteri 6" />
-              </motion.div>
-            </div>
-            <div className="swiper-slide">
-              <motion.div
-                className="trusted-client"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <img src="/assets/img/trusted-client_7.png" alt="Müşteri 7" />
-              </motion.div>
-            </div>
+            {clients.map((client) => (
+              <div className="swiper-slide" key={client.id}>
+                <motion.div
+                  className="trusted-client "
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <img src={client.imgSrc} alt={client.alt} />
+                </motion.div>
+              </div>
+            ))}
           </div>
 
           {/* Navigasyon düğmeleri kaldırıldı */}

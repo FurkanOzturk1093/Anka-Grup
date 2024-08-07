@@ -50,11 +50,7 @@ export default function NavBar() {
                       <p>Blog</p>
                     </Link>
                   </li>
-                  <li>
-                    <Link href="#" className="text-hover-animaiton">
-                      <p>Sayfalar</p>
-                    </Link>
-                  </li>
+
                   <li>
                     <Link href="/contact-us" className="text-hover-animaiton">
                       <p>İletişim</p>
@@ -73,7 +69,7 @@ export default function NavBar() {
             </div>
             <div className="ak-main-header-right">
               <Link
-                href="tel:111 1 111"
+                href="tel:444 7 206"
                 className="d-flex align-items-center gap-3"
               >
                 <div className="heartbeat-icon">
@@ -86,7 +82,7 @@ export default function NavBar() {
                     />
                   </span>
                 </div>
-                <h6>111 1 111</h6>
+                <h6>444 7 206</h6>
               </Link>
             </div>
           </div>
