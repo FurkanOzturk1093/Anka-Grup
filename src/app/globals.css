@@ -16493,7 +16493,7 @@ kbd {
   padding: 45px 35px;
   text-align: center;
   font-size: 16px;
-  height: 100%;
+  min-height: 350px;
 }
 .service-progress-card .service-item .service-info .title {
   margin-top: 15px;
@@ -17171,7 +17171,7 @@ kbd {
 }
 .blog-card .blog-header-info img {
   width: 100%;
-  max-height: 300px;
+  height: 250px;
   transition: all 0.5s ease-in-out;
 }
 .blog-card .blog-body-info {

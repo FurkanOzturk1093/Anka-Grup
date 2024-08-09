@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   services: [
     {
-      href: "/services/1",
+      href: "/services/performans-artisi",
       imgSrc: "/assets/img/service_1.jpg",
       title: "Performans Yükseltmeleri ve Özelleştirme",
       description:
@@ -31,7 +31,7 @@ const initialState = {
       ],
     },
     {
-      href: "/services/2",
+      href: "/services/elektrik-elektronik",
       imgSrc: "/assets/img/service_2.jpg",
       title: "Elektrik ve Elektronik Sistemler",
       description:
@@ -57,7 +57,7 @@ const initialState = {
       ],
     },
     {
-      href: "/services/3",
+      href: "/services/motor-tamir",
       imgSrc: "/assets/img/service_3.jpg",
       title: "Motor Diagnostik ve Onarım",
       description:
