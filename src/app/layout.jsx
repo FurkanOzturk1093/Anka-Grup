@@ -14,6 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/assets/img/logo.svg" />
+      </head>
       <body className={inter.className}>
         <ProviderWrapper>
           <NavBar /> {/* Add the NavBar component here */}
