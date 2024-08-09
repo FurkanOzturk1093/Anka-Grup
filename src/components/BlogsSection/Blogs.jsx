@@ -20,10 +20,10 @@ const BlogPost = ({ post }) => {
       transition={{ duration: 0.5 }}
     >
       <div className="blog-card">
-        <Link href="/blog-single">
+        <Link href={`blog/${post.slug}`}>
           <div className="blog-header-info">
             <Image
-              src={post.image}
+              src={post.imageUrl}
               alt="Blog gönderisi"
               width={400}
               height={250}
@@ -44,7 +44,7 @@ const BlogPost = ({ post }) => {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <Link href="/blog-single" className="blog-title">
+            <Link href={`blog/${post.slug}`} className="blog-title">
               {post.title}
             </Link>
           </motion.div>
@@ -55,7 +55,7 @@ const BlogPost = ({ post }) => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <Link href="/blog-single" className="more-btn">
+          <Link href={`blog/${post.slug}`} className="more-btn">
             DEVAMINI OKU
           </Link>
         </motion.div>
@@ -65,7 +65,7 @@ const BlogPost = ({ post }) => {
 };
 
 const BlogNews = () => {
-  const blogPosts = useSelector((state) => state.blog.posts);
+  const blogPosts = useSelector((state) => state.blog.posts).slice(0, 3);
 
   return (
     <>

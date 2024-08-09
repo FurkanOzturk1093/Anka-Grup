@@ -52,7 +52,7 @@ export default function NavBar() {
                   </li>
 
                   <li>
-                    <Link href="/contact-us" className="text-hover-animaiton">
+                    <Link href="/contact" className="text-hover-animaiton">
                       <p>İletişim</p>
                     </Link>
                   </li>
